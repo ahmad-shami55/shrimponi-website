@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 20%, var(--navy-3) 0%, var(--navy) 65%);
+  overflow: hidden;
+  padding: 90px 0 60px;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.hero-logo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 4px solid var(--orange);
+  box-shadow: 0 0 0 10px rgba(242, 96, 42, 0.15);
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--white);
+  font-size: clamp(2.2rem, 9vw, 4.4rem);
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 420px;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.hero-scroll-chevron {
+  color: var(--orange);
+  font-size: 1.1rem;
+}
+
+@media (min-width: 640px) {
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+}

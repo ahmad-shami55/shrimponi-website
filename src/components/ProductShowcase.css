@@ -1,0 +1,108 @@
+.showcase {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.showcase-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.showcase-light {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.showcase-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.showcase-inner.reverse {
+  flex-direction: column;
+}
+
+.showcase-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  z-index: 1;
+}
+
+.showcase-dark .eyebrow {
+  color: var(--orange-2);
+}
+.showcase-light .eyebrow {
+  color: var(--orange);
+}
+
+.showcase-text h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 8vw, 3.4rem);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.showcase-arabic {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* No card, no rounded box, no background panel behind the product —
+   just the cutout photo itself, large, floating with a soft drop shadow.
+   Works best with a PNG that has a transparent background. */
+.showcase-media {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+}
+
+.showcase-photo {
+  width: 100%;
+}
+
+.showcase-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.4));
+}
+
+.showcase-photo .media-fallback {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 640px) {
+  .showcase-media {
+    max-width: 460px;
+  }
+}
+
+@media (min-width: 860px) {
+  .showcase-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 24px;
+  }
+  .showcase-inner.reverse {
+    flex-direction: row-reverse;
+  }
+  .showcase-text {
+    align-items: flex-start;
+    flex: 1;
+  }
+  .showcase-media {
+    flex: 1;
+    max-width: 540px;
+  }
+}

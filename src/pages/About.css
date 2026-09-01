@@ -1,0 +1,148 @@
+.about-story {
+  background: var(--cream);
+  padding: 70px 0;
+}
+
+.about-story-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.about-story-inner img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--navy);
+}
+
+.about-story-inner h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  color: var(--navy);
+  margin: 0 0 14px;
+}
+
+.about-story-inner p {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-values {
+  background: var(--navy);
+  color: var(--white);
+  padding: 70px 0;
+  text-align: center;
+}
+
+.about-values .eyebrow {
+  color: var(--orange-2);
+}
+
+.about-values-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.about-value-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  text-align: left;
+}
+
+.about-value-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: var(--orange-2);
+}
+
+.about-value-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.about-branches {
+  background: var(--cream);
+  padding: 70px 0 90px;
+  text-align: center;
+}
+
+.about-branches .eyebrow {
+  color: var(--orange);
+}
+
+.about-branches h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  color: var(--navy);
+  margin: 8px 0 30px;
+}
+
+.about-branches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.about-branch-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+  border-top: 4px solid var(--orange);
+}
+
+.about-branch-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--navy);
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.about-branch-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.about-branch-card a {
+  font-family: var(--font-mono);
+  color: var(--orange);
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .about-story-inner {
+    flex-direction: row;
+    text-align: left;
+  }
+  .about-story-inner img {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+  }
+  .about-values-grid,
+  .about-branches-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,72 @@
+.category-tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background: var(--cream-2);
+  box-shadow: 0 14px 30px -16px rgba(13, 26, 51, 0.45);
+  transition: box-shadow 0.25s ease;
+}
+
+.category-tile:hover {
+  box-shadow: 0 20px 38px -14px rgba(13, 26, 51, 0.55);
+}
+
+.category-tile-photo,
+.category-tile-photo img,
+.category-tile-photo .media-fallback {
+  width: 100%;
+  height: 100%;
+}
+
+.category-tile-photo img {
+  object-fit: cover;
+  display: block;
+}
+
+/* Darkens the lower half of the photo so the label text is always
+   legible, regardless of what the photo looks like. */
+.category-tile-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 26, 51, 0) 45%, rgba(13, 26, 51, 0.88) 100%);
+  pointer-events: none;
+}
+
+.category-tile-edge {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--orange);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.category-tile-label {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: left;
+}
+
+.category-tile-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  color: var(--white);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+.category-tile-name-ar {
+  font-size: 0.7rem;
+  color: var(--gold);
+}
