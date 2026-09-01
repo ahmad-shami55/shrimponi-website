@@ -1,3 +1,4 @@
+// src/components/CartDrawer.jsx — replace the whole file
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCart } from '../context/CartContext'
@@ -105,7 +106,7 @@ export default function CartDrawer() {
                     <select value={branchId} onChange={(e) => setBranchId(e.target.value)}>
                       {branches.map((b) => (
                         <option key={b.id} value={b.id}>
-                          {b.name} — {b.address}
+                          {b.name}
                         </option>
                       ))}
                     </select>

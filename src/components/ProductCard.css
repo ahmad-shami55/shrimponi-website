@@ -1,5 +1,6 @@
+/* src/components/ProductCard.css — replace the whole file */
 .product-row {
-  padding: 18px 0;
+  padding: 16px 0;
   border-bottom: 1px dashed rgba(13, 26, 51, 0.14);
 }
 
@@ -9,26 +10,29 @@
 
 .product-row-top {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 8px;
+  gap: 4px 8px;
 }
 
 .product-row-name {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.08rem;
+  font-size: 0.98rem;
   letter-spacing: 0.01em;
   color: var(--navy);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .product-row-ar {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 400;
   color: #9ca3af;
   letter-spacing: 0;
@@ -43,36 +47,37 @@
 }
 
 .product-row-leader {
-  flex: 1;
-  border-bottom: 2px dotted rgba(13, 26, 51, 0.22);
-  transform: translateY(-4px);
-  min-width: 12px;
+  display: none;
 }
 
 .product-row-price {
   flex-shrink: 0;
+  margin-left: auto;
   font-family: var(--font-mono);
   font-weight: 700;
   color: var(--orange);
-  font-size: 1.02rem;
+  font-size: 0.95rem;
 }
 
 .product-row-bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 14px;
+  gap: 10px 14px;
   margin-top: 6px;
 }
 
 .product-row-desc {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #6b7280;
   line-height: 1.5;
   direction: rtl;
   text-align: right;
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .product-new-tag {
@@ -102,4 +107,26 @@
 .product-row-add:hover {
   background: var(--orange);
   transform: translateY(-1px);
+}
+
+/* On wider screens there's room for the full dotted-leader layout on one line */
+@media (min-width: 480px) {
+  .product-row-top {
+    flex-wrap: nowrap;
+  }
+  .product-row-name {
+    white-space: nowrap;
+    font-size: 1.08rem;
+  }
+  .product-row-leader {
+    display: block;
+    flex: 1;
+    min-width: 12px;
+    border-bottom: 2px dotted rgba(13, 26, 51, 0.22);
+    transform: translateY(-4px);
+  }
+  .product-row-price {
+    margin-left: 0;
+    font-size: 1.02rem;
+  }
 }
