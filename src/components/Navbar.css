@@ -81,29 +81,53 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--white);
   border-radius: 999px;
-  padding: 8px 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.72rem;
 }
 
 .location-pin {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--orange-2);
   flex-shrink: 0;
 }
 
-.location-text {
-  max-width: 70px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.location-text,
+.location-chevron {
+  display: none;
 }
 
-.location-chevron {
-  transition: transform 0.2s ease;
-  font-size: 0.85rem;
-  flex-shrink: 0;
+/* From here up there's enough room to show the branch name + chevron too */
+@media (min-width: 480px) {
+  .location-btn {
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .location-pin {
+    font-size: 0.95rem;
+  }
+
+  .location-text {
+    display: block;
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .location-chevron {
+    display: block;
+    transition: transform 0.2s ease;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
 }
+
 .location-chevron.open {
   transform: rotate(180deg);
 }
