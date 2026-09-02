@@ -1,3 +1,4 @@
+// src/context/CartContext.jsx — replace the whole file
 import { createContext, useContext, useMemo, useState } from 'react'
 
 const CartContext = createContext(null)
@@ -14,7 +15,6 @@ export function CartProvider({ children }) {
       }
       return [...prev, { ...product, qty: 1 }]
     })
-    setIsOpen(true)
   }
 
   const removeItem = (id) => setItems((prev) => prev.filter((i) => i.id !== id))

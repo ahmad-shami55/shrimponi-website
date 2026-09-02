@@ -1,3 +1,7 @@
+// src/App.jsx — same caveat as above: this assumes your file looks like this.
+// Safer option: just add these two lines to your existing App.jsx —
+//   1) import StickyCartBar from './components/StickyCartBar'  (near your other imports)
+//   2) <StickyCartBar />  (right after <CartDrawer /> in the JSX)
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { BranchProvider } from './context/BranchContext'
@@ -5,6 +9,7 @@ import { CartProvider } from './context/CartContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CartDrawer from './components/CartDrawer'
+import StickyCartBar from './components/StickyCartBar'
 import Home from './pages/Home'
 import About from './pages/About'
 import DineInMenu from './pages/DineInMenu'
@@ -32,6 +37,7 @@ export default function App() {
         </Routes>
         <Footer />
         <CartDrawer />
+        <StickyCartBar />
       </CartProvider>
     </BranchProvider>
   )

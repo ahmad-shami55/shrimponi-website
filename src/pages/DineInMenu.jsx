@@ -1,3 +1,4 @@
+// src/pages/DineInMenu.jsx — replace the whole file
 import PageHero from '../components/PageHero'
 import MenuBrowser from '../components/MenuBrowser'
 
