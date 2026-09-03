@@ -25,6 +25,12 @@ export const categories = [
     nameAr: 'قريدس مشوي',
     image: '/images/categories/grilled-jumbo.jpg',
   },
+  {
+    id: 'fried-jumbo',
+    nameEn: 'Fried Shrimp Jumbo',
+    nameAr: 'قريدس مقلي جامبو',
+    image: '/images/categories/fried-jumbo.jpg',
+  },
 ]
 
 export const products = [
@@ -79,6 +85,11 @@ export const products = [
   { id: 'gr-1', category: 'grilled-jumbo', nameEn: 'Grilled Shrimp Single', nameAr: 'قريدس مشوي فردي', desc: '8 pcs', price: 900000 },
   { id: 'gr-2', category: 'grilled-jumbo', nameEn: 'Grilled Shrimp Double', nameAr: 'قريدس مشوي نصف كيلو', desc: '1/2 kg · 11 pcs', price: 1200000 },
   { id: 'gr-3', category: 'grilled-jumbo', nameEn: 'Grilled Shrimp Family', nameAr: 'قريدس مشوي كيلو', desc: '1 kg · 22 pcs', price: 2200000 },
+
+  // Fried Shrimp Jumbo
+  { id: 'fj-1', category: 'fried-jumbo', nameEn: 'Fried Shrimp Single', nameAr: 'قريدس مقلي فردي', desc: '8 pcs', price: 900000, isNew: true },
+  { id: 'fj-2', category: 'fried-jumbo', nameEn: 'Fried Shrimp Double', nameAr: 'قريدس مقلي نصف كيلو', desc: '1/2 kg · 11 pcs', price: 1200000, isNew: true },
+  { id: 'fj-3', category: 'fried-jumbo', nameEn: 'Fried Shrimp Family', nameAr: 'قريدس مقلي كيلو', desc: '1 kg · 22 pcs', price: 2200000, isNew: true },
 ]
 
 export const formatPrice = (n) => `${n.toLocaleString('en-US')} L.L`

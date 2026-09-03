@@ -1,4 +1,3 @@
-/* src/components/ProductCard.css — replace the whole file */
 .product-row {
   padding: 16px 0;
   border-bottom: 1px dashed rgba(13, 26, 51, 0.14);
@@ -19,11 +18,11 @@
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 7px;
   min-width: 0;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 0.98rem;
+  font-size: 1.12rem;
   letter-spacing: 0.01em;
   color: var(--navy);
   white-space: normal;
@@ -32,9 +31,9 @@
 
 .product-row-ar {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  color: #9ca3af;
+  color: rgba(13, 26, 51, 0.45);
   letter-spacing: 0;
 }
 
@@ -42,7 +41,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--orange);
   flex-shrink: 0;
 }
 
@@ -53,10 +52,10 @@
 .product-row-price {
   flex-shrink: 0;
   margin-left: auto;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-weight: 700;
   color: var(--orange);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 .product-row-bottom {
@@ -70,9 +69,10 @@
 
 .product-row-desc {
   margin: 0;
-  font-size: 0.82rem;
-  color: #6b7280;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(13, 26, 51, 0.75);
+  line-height: 1.55;
   direction: rtl;
   text-align: right;
   flex: 1;
@@ -116,7 +116,7 @@
   }
   .product-row-name {
     white-space: nowrap;
-    font-size: 1.08rem;
+    font-size: 1.2rem;
   }
   .product-row-leader {
     display: block;
@@ -127,6 +127,6 @@
   }
   .product-row-price {
     margin-left: 0;
-    font-size: 1.02rem;
+    font-size: 1.12rem;
   }
 }
