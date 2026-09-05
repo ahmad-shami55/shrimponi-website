@@ -36,6 +36,12 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Shrimponi. All rights reserved.</span>
+        <span>
+          Made by{' '}
+          <a href="https://instagram.com/am.devlb" target="_blank" rel="noopener noreferrer">
+            AM Devs
+          </a>
+        </span>
       </div>
     </footer>
   )
